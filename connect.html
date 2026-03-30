@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect | Redwood Operations</title>
+  <meta name="description" content="Get in touch with Redwood Operations for commercial property management, acquisitions, or partnership opportunities.">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Redwood <span>Operations</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="approach.html">Approach</a></li>
+        <li><a href="connect.html" class="active">Connect</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="page-hero-label">Connect</p>
+      <h1>Get in <strong>Touch</strong></h1>
+      <p>Whether you're looking for a management partner or exploring acquisition opportunities, we'd like to hear from you.</p>
+      <div class="page-hero-divider"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact">
+    <div class="section-inner">
+      <div class="contact-simple">
+        <h3>Let's Talk</h3>
+        <p>Whether you're looking for a management partner for your commercial property or exploring acquisition opportunities, we'd like to hear from you.</p>
+        <a href="mailto:info@redwoodoperations.com" class="contact-email-link">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <polyline points="22,4 12,13 2,4"/>
+          </svg>
+          info@redwoodoperations.com
+        </a>
+        <p class="contact-location">Greenville, SC</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">Redwood <span>Operations</span></a>
+      <p class="footer-text">&copy; 2026 Redwood Operations LLC. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
